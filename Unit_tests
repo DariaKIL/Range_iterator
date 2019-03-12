@@ -3,11 +3,6 @@ from range import iterator_range
 from range import generator_range
 
 class GenerationTest(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        print('SetUp Class\n')
-    def setUp(self):
-        print('setup called')
 
     def test_iterator_1(self):
         generator = iterator_range(1, 8, 2)
