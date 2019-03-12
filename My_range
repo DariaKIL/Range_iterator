@@ -5,7 +5,7 @@ def   generator_range(start, end, step):
 
 class iterator_range:
     def __init__(self, start, end, step):
-        self.start = start - step
+        self.start = start
         self.end = end
         self.step = step
     def __iter__(self):
