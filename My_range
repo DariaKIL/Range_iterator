@@ -1,6 +1,7 @@
 def generator_range(start, end, step):
     while start < end:
-        yield start
+        b = start
+        yield b
         start += step
 
 
