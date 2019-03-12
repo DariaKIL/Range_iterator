@@ -2,6 +2,7 @@ import unittest
 from range import iterator_range
 from range import generator_range
 
+
 class GenerationTest(unittest.TestCase):
 
     def test_iterator_1(self):
@@ -24,7 +25,6 @@ class GenerationTest(unittest.TestCase):
         with self.assertRaises(StopIteration):
             next(generator)
 
-
     def test_equal_range_iterator(self):
         test_iter_range_1 = list(iterator_range(1, 10, 1))
         test_range_1 = list(range(1, 10, 1))
@@ -32,7 +32,6 @@ class GenerationTest(unittest.TestCase):
         test_range_2 = list(range(5, 22, 3))
         self.assertEqual(test_iter_range_1, test_range_1)
         self.assertEqual(test_iter_range_2, test_range_2)
-
 
     def test_generator(self):
         generator = generator_range(1, 8, 2)
@@ -55,6 +54,7 @@ class GenerationTest(unittest.TestCase):
         test_range_2 = list(range(5, 22, 3))
         self.assertEqual(test_range_1, test_myrange_1)
         self.assertEqual(test_range_2, test_myrange_2)
+
 
 if __name__ == '__main__':
     unittest.main()
