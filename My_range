@@ -1,0 +1,23 @@
+def generator_range(start, end, step):
+    while start < end:
+        b = start
+        yield b
+        start += step
+
+
+class iterator_range:
+    def __init__(self, start, end, step):
+        self.start = start
+        self.end = end
+        self.step = step
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        a = self.start
+        self.step += self.step
+        if a < self.end:
+            return a
+        else:
+            raise StopIteration
