@@ -4,7 +4,6 @@ def generator_range(start, end, step):
         yield b
         start += step
 
-
 class iterator_range:
     def __init__(self, start, end, step):
         self.start = start
