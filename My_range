@@ -16,8 +16,9 @@ class iterator_range:
 
     def __next__(self):
         a = self.start
-        self.step += self.step
+        self.start += self.step
         if a < self.end:
             return a
         else:
             raise StopIteration
+
